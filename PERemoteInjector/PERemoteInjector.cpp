@@ -47,8 +47,6 @@ DWORD FindProcessID(LPWSTR processName) {
 
 int main()
 {
-    std::cout << "Hello World!\n";
-
 
 	/*
 		1. Get full path of PE file to inject.
@@ -179,7 +177,7 @@ int main()
 		for (DWORD i = 0; i < relocationEntryCount; i++, pCurrentBaseRelocationEntry++) {
 			if (pCurrentBaseRelocationEntry->type == IMAGE_REL_BASED_DIR64) {
 
-				ULONGLONG* pRelocationValue = (ULONGLONG*)((LPBYTE)pExePayloadMapped + (ULONGLONG)((pCurrentBaseRelocation->VirtualAddress + pCurrentBaseRelocationEntry->offset)));
+				ULONGLONG* pRelocationValue = (ULONGLONG*)((LPBYTE)pExePayloadMapped + (ULONGLONG)((ULONGLONG)pCurrentBaseRelocation->VirtualAddress + pCurrentBaseRelocationEntry->offset));
 				ULONGLONG updatedRelocationValue = (ULONGLONG)((*pRelocationValue - pExePayloadNTHeaders->OptionalHeader.ImageBase) + (LPBYTE)pRemoteMappedBuffer);
 				*pRelocationValue = updatedRelocationValue;
 			}
