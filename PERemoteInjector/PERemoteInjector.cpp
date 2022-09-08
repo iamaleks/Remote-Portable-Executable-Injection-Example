@@ -56,7 +56,7 @@ int main()
 	std::string exePath = "C:\\PEPayload.exe";
 #else
 	std::string exePath;
-	std::cout << "Enter EXE to Inject into self: ";
+	std::cout << "Enter EXE to Inject into notepad.exe: ";
 	std::cin >> exePath;
 #endif
 
