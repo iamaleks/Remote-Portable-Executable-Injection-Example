@@ -2,7 +2,7 @@
 
 Example implementation of Reflective DLL Injection.
 
-Related to blog post located at [https://posts.thinkbox.dev/posts/2023/01/12/malware-techniques-remote-portable-executable-injection](https://posts.thinkbox.dev/posts/2023/01/12/malware-techniques-remote-portable-executable-injection)
+Related to blog post located at [https://posts.thinkbox.dev/remote-portable-executable-injection/](https://posts.thinkbox.dev/remote-portable-executable-injection/)
 
 ## Execution Instructions
 
